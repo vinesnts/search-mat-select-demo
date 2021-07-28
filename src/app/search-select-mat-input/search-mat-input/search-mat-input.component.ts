@@ -22,6 +22,9 @@ const ALLOWED_KEYS: Array<string> = [
   templateUrl: './search-mat-input.component.html',
   styleUrls: ['./search-mat-input.component.scss']
 })
+/**
+ * @author viniciusalmeida.dev
+ */
 export class SearchMatInputComponent implements OnInit {
   formGroup: FormGroup;
 

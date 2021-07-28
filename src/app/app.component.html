@@ -8,163 +8,161 @@
 
 <div>
   <ol>
-    <li id="howto"><h2>How to...</h2>
-      <ul>
-        <li>
-          <h2>import to your project</h2>
-          <ul>
-            <li>Simple copy the <strong>search-select-mat-input</strong> folder into you project.</li>
-            <li>Then import the SearchSelectMatInputModule to your component.</li>
-          </ul>
-        </li>
-        <li>
-          <h2>set the select options</h2>
-          <p>Use the attribute <code>data</code>.</p>
-          <p>Note: the data passed to the search-select-mat-input MUST extend from the GenericData interface avaliable in the SearchSelectMatInputComponent class.</p>
-        </li>
-        <li>
-          <h2>set the input label</h2>
-          <p>Use the attribute <code>inputLabel</code> to set the label/placeholder of the closed select input.</p>
-        </li>
-    
-        <li>
-          <h2>add the Select All/Mark All checkbox</h2>
-          <p>Use the data binding attribute <code>[showSelectAll]</code> to enable showing the option.</p>
-          <ul>
-            <li>
-              <h3><code>[showSelectAll]="true"</code></h3>
-              <app-search-select-mat-input
-                [data]="states"
-                inputLabel="Brazilian States"
-                [selectMultiple]="true"
-                [showSelectAll]="true"
-                selectAllLabel="Mark all"
-                filterLabel="Search for a Brazilian state">
-              </app-search-select-mat-input>
-            </li>
-            <li>
-              <h3><code>[showSelectAll]="false"</code></h3>
-              <app-search-select-mat-input [data]="states" inputLabel="Brazilian States" [selectMultiple]="true"
-                [showSelectAll]="false" filterLabel="Search for a Brazilian state">
-              </app-search-select-mat-input>
-            </li>
-            <li>
-              <h3>Set Select All/Mark All checkbox label</h3>
-              <p>Use the atribute <code>filterLabel.</code></p>
-            </li>
-          </ul>
-        </li>
-    
-        <li>
-          <h2>choose between a one option or multiple selector</h2>
-          <p>Use the data binding attribute <code>[selectMultiple]</code> to switch between one option only or multiple selector.</p>
-          <ul>
-            <li>
-              <h3><code>[selectMultiple]="true"</code></h3>
-              <app-search-select-mat-input 
-                [data]="states"
-                inputLabel="Brazilian States"
-                [selectMultiple]="true"
-                [showSelectAll]="true"
-                selectAllLabel="Mark all"
-                filterLabel="Search for a Brazilian state">
-              </app-search-select-mat-input>
-            </li>
-            <li>
-              <h3><code>[selectMultiple]="false"</code></h3>
-              <app-search-select-mat-input
-                [data]="states"
-                inputLabel="Brazilian States"
-                [selectMultiple]="false"
-                filterLabel="Search for a Brazilian state">
-              </app-search-select-mat-input>
-            </li>
-          </ul>
-        </li>
-    
-        <li>
-          <h2>change mat input appearance</h2>
-          <p>Use the <code>appearance</code> attribute as done in a mat input.</p>
-          <ul>
-            <li>
-              <h3><code>appearance="legacy"</code></h3>
-              <app-search-select-mat-input
-                appearance="legacy"
-                [data]="states"
-                inputLabel="Brazilian States"
-                [selectMultiple]="false"
-                filterLabel="Search for a Brazilian state">
-              </app-search-select-mat-input>
-            </li>
-            <li>
-              <h3><code>appearance="standard"</code></h3>
-              <app-search-select-mat-input
-                appearance="standard"
-                [data]="states"
-                inputLabel="Brazilian States"
-                [selectMultiple]="false"
-                filterLabel="Search for a Brazilian state">
-              </app-search-select-mat-input>
-            </li>
-            <li>
-              <h3><code>appearance="outline"</code></h3>
-              <app-search-select-mat-input 
-                appearance="outline"
-                [data]="states"
-                inputLabel="Brazilian States"
-                [selectMultiple]="true"
-                [showSelectAll]="true"
-                selectAllLabel="Mark all"
-                filterLabel="Search for a Brazilian state">
-              </app-search-select-mat-input>
-            </li>
-            <li>
-              <h3><code>appearance="fill"</code></h3>
-              <app-search-select-mat-input
-                appearance="fill"
-                [data]="states"
-                inputLabel="Brazilian States"
-                [selectMultiple]="false"
-                filterLabel="Search for a Brazilian state">
-              </app-search-select-mat-input>
-            </li>
-          </ul>
-          <p>Note: Default appearance is <code>outline</code></p>
-        </li>
-    
-        <li>
-          <h2>change mat input float label behavior</h2>
-          <p>Use the <code>floatLabel</code> attribute as done in a mat input</p>
-          <ul>
-            <li>
-              <h3><code>floatLabel="auto"</code></h3>
-              <app-search-select-mat-input
-                floatLabel="auto"
-                [data]="states"
-                inputLabel="Brazilian States"
-                [selectMultiple]="true"
-                [showSelectAll]="true"
-                selectAllLabel="Mark all"
-                filterLabel="Search for a Brazilian state">
-              </app-search-select-mat-input>
-            </li>
-            <li>
-              <h3><code>floatLabel="always"</code></h3>
-              <app-search-select-mat-input 
-                floatLabel="always"
-                [data]="states"
-                inputLabel="Brazilian States"
-                [selectMultiple]="false"
-                filterLabel="Search for a Brazilian state">
-              </app-search-select-mat-input>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li>
-      <h2>Accessibility</h2>
-      Navigation through keyboard is avaliable on this component, see bellow the avaliable key navigation keys and shortcuts:
+    <h2><li id="howto">How to...</li></h2>
+    <ul>
+      <li>
+        <h2>import to your project</h2>
+        <ul>
+          <li>Simple copy the <strong><a href="src/app/search-select-mat-input">search-select-mat-input</a></strong> folder into you project.</li>
+          <li>Then import the <code>SearchSelectMatInputModule</code> to your component.</li>
+        </ul>
+      </li>
+      <li>
+        <h2>set the select options</h2>
+        <p>Use the attribute <code>data</code>.</p>
+        <p>Note: the data passed to the search-select-mat-input MUST extend from the GenericData interface avaliable in the SearchSelectMatInputComponent class.</p>
+      </li>
+      <li>
+        <h2>set the input label</h2>
+        <p>Use the attribute <code>inputLabel</code> to set the label/placeholder of the closed select input.</p>
+      </li>
+  
+      <li>
+        <h2>add the Select All/Mark All checkbox</h2>
+        <p>Use the data binding attribute <code>[showSelectAll]</code> to enable showing the option.</p>
+        <ul>
+          <li>
+            <h3><code>[showSelectAll]="true"</code></h3>
+            <app-search-select-mat-input
+              [data]="states"
+              inputLabel="Brazilian States"
+              [selectMultiple]="true"
+              [showSelectAll]="true"
+              selectAllLabel="Mark all"
+              filterLabel="Search for a Brazilian state">
+            </app-search-select-mat-input>
+          </li>
+          <li>
+            <h3><code>[showSelectAll]="false"</code></h3>
+            <app-search-select-mat-input [data]="states" inputLabel="Brazilian States" [selectMultiple]="true"
+              [showSelectAll]="false" filterLabel="Search for a Brazilian state">
+            </app-search-select-mat-input>
+          </li>
+          <li>
+            <h3>Set Select All/Mark All checkbox label</h3>
+            <p>Use the atribute <code>filterLabel.</code></p>
+          </li>
+        </ul>
+      </li>
+  
+      <li>
+        <h2>choose between a one option or multiple selector</h2>
+        <p>Use the data binding attribute <code>[selectMultiple]</code> to switch between one option only or multiple selector.</p>
+        <ul>
+          <li>
+            <h3><code>[selectMultiple]="true"</code></h3>
+            <app-search-select-mat-input 
+              [data]="states"
+              inputLabel="Brazilian States"
+              [selectMultiple]="true"
+              [showSelectAll]="true"
+              selectAllLabel="Mark all"
+              filterLabel="Search for a Brazilian state">
+            </app-search-select-mat-input>
+          </li>
+          <li>
+            <h3><code>[selectMultiple]="false"</code></h3>
+            <app-search-select-mat-input
+              [data]="states"
+              inputLabel="Brazilian States"
+              [selectMultiple]="false"
+              filterLabel="Search for a Brazilian state">
+            </app-search-select-mat-input>
+          </li>
+        </ul>
+      </li>
+  
+      <li>
+        <h2>change mat input appearance</h2>
+        <p>Use the <code>appearance</code> attribute as done in a mat input.</p>
+        <ul>
+          <li>
+            <h3><code>appearance="legacy"</code></h3>
+            <app-search-select-mat-input
+              appearance="legacy"
+              [data]="states"
+              inputLabel="Brazilian States"
+              [selectMultiple]="false"
+              filterLabel="Search for a Brazilian state">
+            </app-search-select-mat-input>
+          </li>
+          <li>
+            <h3><code>appearance="standard"</code></h3>
+            <app-search-select-mat-input
+              appearance="standard"
+              [data]="states"
+              inputLabel="Brazilian States"
+              [selectMultiple]="false"
+              filterLabel="Search for a Brazilian state">
+            </app-search-select-mat-input>
+          </li>
+          <li>
+            <h3><code>appearance="outline"</code></h3>
+            <app-search-select-mat-input 
+              appearance="outline"
+              [data]="states"
+              inputLabel="Brazilian States"
+              [selectMultiple]="true"
+              [showSelectAll]="true"
+              selectAllLabel="Mark all"
+              filterLabel="Search for a Brazilian state">
+            </app-search-select-mat-input>
+          </li>
+          <li>
+            <h3><code>appearance="fill"</code></h3>
+            <app-search-select-mat-input
+              appearance="fill"
+              [data]="states"
+              inputLabel="Brazilian States"
+              [selectMultiple]="false"
+              filterLabel="Search for a Brazilian state">
+            </app-search-select-mat-input>
+          </li>
+        </ul>
+        <p>Note: Default appearance is <code>outline</code></p>
+      </li>
+  
+      <li>
+        <h2>change mat input float label behavior</h2>
+        <p>Use the <code>floatLabel</code> attribute as done in a mat input</p>
+        <ul>
+          <li>
+            <h3><code>floatLabel="auto"</code></h3>
+            <app-search-select-mat-input
+              floatLabel="auto"
+              [data]="states"
+              inputLabel="Brazilian States"
+              [selectMultiple]="true"
+              [showSelectAll]="true"
+              selectAllLabel="Mark all"
+              filterLabel="Search for a Brazilian state">
+            </app-search-select-mat-input>
+          </li>
+          <li>
+            <h3><code>floatLabel="always"</code></h3>
+            <app-search-select-mat-input 
+              floatLabel="always"
+              [data]="states"
+              inputLabel="Brazilian States"
+              [selectMultiple]="false"
+              filterLabel="Search for a Brazilian state">
+            </app-search-select-mat-input>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <h2><li>Accessibility</li></h2>
+      <p>Navigation through keyboard is avaliable on this component, see bellow the avaliable key navigation keys and shortcuts:</p>
       <ul>
         <li>
           <code>enter</code>
@@ -192,9 +190,5 @@
         </li>
       </ul>
       <p>Note: <code>tab</code> will NOT navigate properly inside selects overall, this either.</p>
-    </li>
-
   </ol>
-
 </div>
-

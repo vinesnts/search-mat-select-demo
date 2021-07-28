@@ -15,6 +15,9 @@ export interface GenericData {
   templateUrl: './search-select-mat-input.component.html',
   styleUrls: ['./search-select-mat-input.component.scss']
 })
+/**
+ * @author viniciusalmeida.dev
+ */
 export class SearchSelectMatInputComponent implements OnInit {
   keydownSubscription: Subscription;
   keyupSubscription: Subscription;
