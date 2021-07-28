@@ -1,0 +1,13 @@
+<form [formGroup]="formGroup">
+  <div floatLabel="never" class="form-group">
+    <input
+      class="form-input-control"
+      #filterInput
+      formControlName="filter"
+      type="text"
+      [placeholder]="filterLabel"
+      (keydown)="handleKeydown($event)"
+      (keyup)="handleKeyup($event)"
+    />
+  </div>
+</form>

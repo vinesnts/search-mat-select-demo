@@ -1,0 +1,29 @@
+<form [formGroup]="formGroup">
+  <mat-form-field [appearance]="appearance" [floatLabel]="floatLabel">
+    <mat-label>{{ inputLabel }}</mat-label>
+    <mat-select
+      #selectInput
+      formControlName="data"
+      [multiple]="selectMultiple"
+      (openedChange)="doFocusFilter()"
+      (selectionChange)="handleSelectAll($event)"
+    >
+      <app-search-mat-input
+        #filterInput
+        [filterLabel]="'Filter Brazilian states' + ' (CTRL + S)'"
+        (onChange)="doFilter($event)"
+        (onExit)="doExitSearchInput()"
+      >
+      </app-search-mat-input>
+      <mat-option
+        #selectAllOption
+        *ngIf="showSelectAll && selectMultiple"
+        [value]="selectAllOptionValue"
+        >{{ selectAllLabel }}</mat-option
+      >
+      <mat-option *ngFor="let d of data" [value]="d" (click)="doSelectAny()">
+        {{ d.name }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</form>
