@@ -21,7 +21,7 @@
         [value]="selectAllOptionValue"
         >{{ selectAllLabel }}</mat-option
       >
-      <mat-option *ngFor="let d of data" [value]="d" (click)="doSelectAny()">
+      <mat-option *ngFor="let d of data" [value]="d">
         {{ d.name }}
       </mat-option>
     </mat-select>

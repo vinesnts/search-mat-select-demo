@@ -29,8 +29,11 @@ export class SearchMatInputComponent implements OnInit {
   formGroup: FormGroup;
 
   @ViewChild('filterInput') filterInput: ElementRef;
+  /** filter input label text */
   @Input('filterLabel') filterLabel: string = 'Filter option';
+  /** event emitted on any change on the filter input */
   @Output() onChange: EventEmitter<string> = new EventEmitter<string>();
+  /** event emitted on escape key pressed  */
   @Output() onExit: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   constructor(private fb: FormBuilder) {
@@ -41,10 +44,17 @@ export class SearchMatInputComponent implements OnInit {
 
   ngOnInit() {}
 
-  handleKeyup(event: KeyboardEvent): void {
+  /**
+   * Emits changes on the input after last change
+   */
+  handleKeyup(): void {
     this.onChange.emit(this.formGroup.get('filter').value);
   }
 
+  /**
+   * Handles shortcuts on keydown
+   * @param event keyboard event emitted when key is pressed down
+   */
   handleKeydown(event: KeyboardEvent): void {
     if (ALLOWED_KEYS.includes(event.code)) return;
     else if (event.key === 'Escape') this.onExit.emit(true);

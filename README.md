@@ -13,7 +13,7 @@
       <li>
         <h2>import to your project</h2>
         <ul>
-          <li>Simple copy the <strong><a href="src/app/search-select-mat-input">search-select-mat-input</a></strong> folder into you project.</li>
+          <li>Simple extract and copy the <strong><a href="src/app/search-select-mat-input">search-select-mat-input</a></strong> folder into you project.</li>
           <li>Then import the <code>SearchSelectMatInputModule</code> to your component.</li>
         </ul>
       </li>
@@ -82,6 +82,16 @@
           </li>
           <li>
             <code>floatLabel="always"</code>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <h2>handle events</h2>
+        <p>For now, there is only one event emitted from the <code>SearchSelectMatInput</code>.</p>
+        <ul>
+          <li>
+            <h3><code>(selectionChange)</code></h3>
+            <p>This event emits <code>GenericData[]</code> every time an option is selected or deselected.</p>
           </li>
         </ul>
       </li>

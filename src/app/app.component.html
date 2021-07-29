@@ -13,7 +13,7 @@
       <li>
         <h2>import to your project</h2>
         <ul>
-          <li>Simple copy the <strong><a href="src/app/search-select-mat-input">search-select-mat-input</a></strong> folder into you project.</li>
+          <li>Simple extract and copy the <strong><a href="https://github.com/vinesnts/search-select-mat-input-angular/blob/master/artifacts/search-select-mat-input.tar.xz">search-select-mat-input</a></strong> folder into you project.</li>
           <li>Then import the <code>SearchSelectMatInputModule</code> to your component.</li>
         </ul>
       </li>
@@ -131,7 +131,6 @@
         </ul>
         <p>Note: Default appearance is <code>outline</code></p>
       </li>
-  
       <li>
         <h2>change mat input float label behavior</h2>
         <p>Use the <code>floatLabel</code> attribute as done in a mat input</p>
@@ -159,6 +158,29 @@
             </app-search-select-mat-input>
           </li>
         </ul>
+      </li>
+      <li>
+        <h2>handle events</h2>
+        <p>For now, there is only one event emitted from the <code>SearchSelectMatInput</code>.</p>
+        <ul>
+          <li>
+            <h3><code>(selectionChange)</code></h3>
+            <p>This event emits <code>GenericData[]</code> every time an option is selected or deselected.</p>
+          </li>
+        </ul>
+        <h4>Test live events below:</h4>
+        <app-search-select-mat-input
+          [data]="states"
+          inputLabel="Brazilian States"
+          [selectMultiple]="true"
+          [showSelectAll]="true"
+          selectAllLabel="Mark all"
+          filterLabel="Search for a Brazilian state"
+          (selectionChange)="selectionChange1($event)">
+        </app-search-select-mat-input>
+        <code>
+            [{{ formatOptions() }}]
+        </code>
       </li>
     </ul>
     <h2><li>Accessibility</li></h2>
