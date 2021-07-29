@@ -90,7 +90,7 @@
         <p>For now, there is only one event emitted from the <code>SearchSelectMatInput</code>.</p>
         <ul>
           <li>
-            <h3><code>(selectionChange)</code></h3>
+            <p><code>(selectionChange)</code></p>
             <p>This event emits <code>GenericData[]</code> every time an option is selected or deselected.</p>
           </li>
         </ul>
