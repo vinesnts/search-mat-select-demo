@@ -4,15 +4,15 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
-import { SearchSelectMatInputModule } from './search-select-mat-input/search-select-mat-input.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SearchMatSelectModule } from 'search-mat-select';
 
 @NgModule({
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
-    SearchSelectMatInputModule
+    SearchMatSelectModule,
   ],
   declarations: [AppComponent, HelloComponent],
   bootstrap: [AppComponent]

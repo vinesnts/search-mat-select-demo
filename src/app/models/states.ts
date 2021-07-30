@@ -1,5 +1,5 @@
 import { M } from '@angular/cdk/keycodes';
-import { GenericData } from '../search-select-mat-input/search-select-mat-input.component';
+import { GenericData } from 'search-mat-select/lib/search-mat-select.component';
 
 export interface State extends GenericData {
   sigla: string;

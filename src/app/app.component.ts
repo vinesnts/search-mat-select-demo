@@ -1,7 +1,7 @@
 import { Component, VERSION } from '@angular/core';
 import { BRAZILIAN_STATES } from './models/states';
 import { State } from './models/states';
-import { GenericData } from './search-select-mat-input/search-select-mat-input.component';
+import { GenericData } from 'search-mat-select/lib/search-mat-select.component';
 
 @Component({
   selector: 'my-app',

@@ -1,8 +1,11 @@
 <div id="intro">
-  <h1>Search Select Mat Input</h1>
+  <h1>SearchMatSelect Demo</h1>
   <p>by  <a href="https://viniciusalmeida.dev">@viniciusalmeida.dev</a></p>
   <p>
-    This is a example AND reusable component of a select input styled with Angular Material components which features a filter/search box to find options.
+    This is a demonstration of the <a href="https://github.com/vinesnts/search-mat-select">SearchMatSelect</a> component. 
+  </p>
+  <p>
+    The SearchMatSelect is a component made on top of the <a href="https://material.angular.io/components/select/overview">Mat Select</a> component of the <a href="https://material.angular.io/">Material Angular</a> library. The SearchMatSelect features a search box to find the avaliable options and a select all option, it as well offers keybord navigation for accessibility.
   </p>
 </div>
 
@@ -13,8 +16,12 @@
       <li>
         <h2>import to your project</h2>
         <ul>
-          <li>Simple extract and copy the <strong><a href="https://github.com/vinesnts/search-select-mat-input-angular/blob/master/artifacts/search-select-mat-input.tar.xz">search-select-mat-input</a></strong> folder into you project.</li>
-          <li>Then import the <code>SearchSelectMatInputModule</code> to your component.</li>
+          <li>Install <code>search-mat-select</code> in your project.</li>
+          <code>
+            npm install search-mat-select
+          </code>
+          <li>Then, import the <code>SearchMatSelectModule</code> to your <code>app.module.ts</code>.</li>
+          <li>Finally, use the component <code>lib-search-mat-select</code> wherever you want</li>
         </ul>
       </li>
       <li>
@@ -33,20 +40,20 @@
         <ul>
           <li>
             <h3><code>[showSelectAll]="true"</code></h3>
-            <app-search-select-mat-input
+            <lib-search-mat-select
               [data]="states"
               inputLabel="Brazilian States"
               [selectMultiple]="true"
               [showSelectAll]="true"
               selectAllLabel="Mark all"
               filterLabel="Search for a Brazilian state">
-            </app-search-select-mat-input>
+            </lib-search-mat-select>
           </li>
           <li>
             <h3><code>[showSelectAll]="false"</code></h3>
-            <app-search-select-mat-input [data]="states" inputLabel="Brazilian States" [selectMultiple]="true"
+            <lib-search-mat-select [data]="states" inputLabel="Brazilian States" [selectMultiple]="true"
               [showSelectAll]="false" filterLabel="Search for a Brazilian state">
-            </app-search-select-mat-input>
+            </lib-search-mat-select>
           </li>
           <li>
             <h3>Set Select All/Mark All checkbox label</h3>
@@ -61,23 +68,23 @@
         <ul>
           <li>
             <h3><code>[selectMultiple]="true"</code></h3>
-            <app-search-select-mat-input 
+            <lib-search-mat-select
               [data]="states"
               inputLabel="Brazilian States"
               [selectMultiple]="true"
               [showSelectAll]="true"
               selectAllLabel="Mark all"
               filterLabel="Search for a Brazilian state">
-            </app-search-select-mat-input>
+            </lib-search-mat-select>
           </li>
           <li>
             <h3><code>[selectMultiple]="false"</code></h3>
-            <app-search-select-mat-input
+            <lib-search-mat-select
               [data]="states"
               inputLabel="Brazilian States"
               [selectMultiple]="false"
               filterLabel="Search for a Brazilian state">
-            </app-search-select-mat-input>
+            </lib-search-mat-select>
           </li>
         </ul>
       </li>
@@ -88,27 +95,27 @@
         <ul>
           <li>
             <h3><code>appearance="legacy"</code></h3>
-            <app-search-select-mat-input
+            <lib-search-mat-select
               appearance="legacy"
               [data]="states"
               inputLabel="Brazilian States"
               [selectMultiple]="false"
               filterLabel="Search for a Brazilian state">
-            </app-search-select-mat-input>
+            </lib-search-mat-select>
           </li>
           <li>
             <h3><code>appearance="standard"</code></h3>
-            <app-search-select-mat-input
+            <lib-search-mat-select
               appearance="standard"
               [data]="states"
               inputLabel="Brazilian States"
               [selectMultiple]="false"
               filterLabel="Search for a Brazilian state">
-            </app-search-select-mat-input>
+            </lib-search-mat-select>
           </li>
           <li>
             <h3><code>appearance="outline"</code></h3>
-            <app-search-select-mat-input 
+            <lib-search-mat-select 
               appearance="outline"
               [data]="states"
               inputLabel="Brazilian States"
@@ -116,17 +123,17 @@
               [showSelectAll]="true"
               selectAllLabel="Mark all"
               filterLabel="Search for a Brazilian state">
-            </app-search-select-mat-input>
+            </lib-search-mat-select>
           </li>
           <li>
             <h3><code>appearance="fill"</code></h3>
-            <app-search-select-mat-input
+            <lib-search-mat-select
               appearance="fill"
               [data]="states"
               inputLabel="Brazilian States"
               [selectMultiple]="false"
               filterLabel="Search for a Brazilian state">
-            </app-search-select-mat-input>
+            </lib-search-mat-select>
           </li>
         </ul>
         <p>Note: Default appearance is <code>outline</code></p>
@@ -137,7 +144,7 @@
         <ul>
           <li>
             <h3><code>floatLabel="auto"</code></h3>
-            <app-search-select-mat-input
+            <lib-search-mat-select
               floatLabel="auto"
               [data]="states"
               inputLabel="Brazilian States"
@@ -145,17 +152,17 @@
               [showSelectAll]="true"
               selectAllLabel="Mark all"
               filterLabel="Search for a Brazilian state">
-            </app-search-select-mat-input>
+            </lib-search-mat-select>
           </li>
           <li>
             <h3><code>floatLabel="always"</code></h3>
-            <app-search-select-mat-input 
+            <lib-search-mat-select 
               floatLabel="always"
               [data]="states"
               inputLabel="Brazilian States"
               [selectMultiple]="false"
               filterLabel="Search for a Brazilian state">
-            </app-search-select-mat-input>
+            </lib-search-mat-select>
           </li>
         </ul>
       </li>
@@ -169,7 +176,7 @@
           </li>
         </ul>
         <h4>Test live events below:</h4>
-        <app-search-select-mat-input
+        <lib-search-mat-select
           [data]="states"
           inputLabel="Brazilian States"
           [selectMultiple]="true"
@@ -177,14 +184,14 @@
           selectAllLabel="Mark all"
           filterLabel="Search for a Brazilian state"
           (selectionChange)="selectionChange1($event)">
-        </app-search-select-mat-input>
+        </lib-search-mat-select>
         <code>
-            [{{ formatOptions() }}]
+            {{ formatOptions() }}
         </code>
       </li>
     </ul>
     <h2><li>Accessibility</li></h2>
-      <p>Navigation through keyboard is avaliable on this component, see bellow the avaliable key navigation keys and shortcuts:</p>
+      <p>Navigation through keyboard is avaliable on this component, see bellow the avaliable navigation keys and shortcuts:</p>
       <ul>
         <li>
           <code>enter</code>
