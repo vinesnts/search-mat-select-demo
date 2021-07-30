@@ -6,7 +6,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "search-select-mat-input-angular": {
+    "search-mat-select-demo": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/search-select-mat-input-angular",
+            "outputPath": "dist/search-mat-select-demo",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -51,18 +51,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "search-select-mat-input-angular:build"
+            "browserTarget": "search-mat-select-demo:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "search-select-mat-input-angular:build:production"
+              "browserTarget": "search-mat-select-demo:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "search-select-mat-input-angular:build"
+            "browserTarget": "search-mat-select-demo:build"
           }
         },
         "test": {
@@ -97,5 +97,5 @@
       }
     }
   },
-  "defaultProject": "search-select-mat-input-angular"
+  "defaultProject": "search-mat-select-demo"
 }
